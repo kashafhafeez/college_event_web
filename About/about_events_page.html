@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #f4f4f4;
+      padding-top: 80px;
+    }
+
+
+   header {
+      background: #006b8b;
+      color: white;
+      padding: 30px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    header .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition:  0.3s;
+    }
+    nav a:hover {
+      font-weight: bold;
+      color: lightyellow;
+      text-decoration: none;
+    }
+    
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+      }
+      nav.active {
+        display: flex;
+      }
+      .menu-btn {
+        display: block;
+      }
+    }
+    main {
+      margin-top: 80px;
+      padding: 20px;
+    }
+
+    .myfooter{
+    margin-top: 50px;
+    border-top: 5px solid #006b8b;
+    width: 100%;
+    background-color: white;
+    font-size: 16px;
+}
+.footer-section a{
+    color: #006b8b;
+    text-decoration: none;
+}
+.footer-section h3{
+    color: #006b8b;
+}
+.footer-section ul{
+    list-style: none;
+    color: #006b8b;
+}
+.footer-section ul li a{
+    color: #006b8b;
+    text-decoration: none;
+}
+.footer-bottom{
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    background-color: #006b8b; 
+    color: white;
+    align-items: center;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 500;
+    height: fit-content;
+}
+.footer-container{
+    padding: 20px;
+}
+
+
+    .hero{
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .event-card{
+      transition: transform 0.5s;
+      cursor: pointer;
+    }
+    .event-card:hover{
+      transform: scale(1.03);
+      background-color: #5c9cb6;
+      color: whitesmoke;
+    }
+    .aboutheading{
+      color: #89d5f3;
+      text-shadow: 2px 2px 1px #0c272e;
+      font-style: italic;
+    }
+    h1, h2, h3, h4, h5{
+      color: #1F4959;
+    }
+    .aboutparagraph{
+      background: #1f4959a4; 
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+      color: white;
+      padding-top: 5px;
+      font-size: 25px;
+      padding-bottom: 5px;
+      font-weight: 480;
+      font-style: italic;
+    }
+    .heading1{
+      color: #1F4959;
+      position: relative;
+      width: fit-content;
+    }
+    .heading1:after {
+  content: "";
+  position: absolute;
+  right: 50%;
+  bottom: -7px;
+  width: 0;
+  height: 3px;
+  background-color: #1F4959;
+  transition: 0.2s;
+}
+
+.heading1:hover::after {
+  right: 0;
+  width: 100%;
+}
+.banner-image{
+  background-image: url('banner.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+}
+.corevalues{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: whitesmoke;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  display: block;
+  font-style: italic;
+  justify-content: center;
+  text-align: center;
+}
+.missionandvision{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #c8efff;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  display: block;
+  justify-content: center;
+  text-align: center;
+  font-size: 25px;
+  font-style: italic;
+  color: #1F4959;
+}
+.corevalues ul li{
+  list-style: none;
+  font-size: 25px;
+  font-style: italic;
+  color: #1F4959;
+}
+@media (max-width:470px) {
+  .aboutheading{
+    font-size: 25px;
+  }
+  .heading1{
+    font-size: 20px;
+  }
+  .aboutparagraph{
+    font-size: 15px;
+  }
+  .corevalues ul li{
+    font-size: 15px;
+  }
+  .missionandvision{
+    font-size: 15px;
+  }
+  
+}
+.card-title a{
+  text-decoration: none;
+  color: #006b8b;
+
+}
+
+.card-title a :hover{
+  color: white;
+}
+  </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">CampusConnect</div>
+    <button class="menu-btn"><span class="material-icons">menu</span></button>
+    <nav id="menu">
+      <a href="../homepage/home.html">Home</a>
+      <a href="../About/about_events_page.html">About Us</a>
+      <a href="../Event/event.html">Event</a>
+      <a href="../gallerypge/gallery.html">Gallery</a>
+      <a href="../contact/contact.html">Contact Us</a>
+      <a href="../feedbackpge/feedback.html">Feedback</a>
+    </nav>
+  </header>
+
+  <div class="banner-image">
+    <div class="row text-center justify-content-center">
+    <div class="col-md-6 text-center mt-2">
+      <h1 class="aboutheading">About CampusConnect </h1>
+      <p class="aboutparagraph">CampusConnect is a dynamic and student-centered college dedicated to fostering academic excellence, personal growth, and community engagement. Our mission is to empower students with the knowledge, skills, and experiences they need to thrive in today’s fast-changing world. With a vibrant campus life, innovative programs, and a supportive learning environment, CampusConnect serves as a hub for collaboration, creativity, and career development. Whether you're beginning your academic journey or looking to advance your education, CampusConnect is where opportunity meets inspiration.
+      </p>
+    </div>
+    </div>
+    </div>
+<div class="container my-3">
+  <section id="about" class="hero mb-5">
+    
+    <div class="corevalues">
+      <h2>Core Values</h2>
+      <ul>
+        <li>Integrity and Accountability</li>
+        <li>Diversity and Inclusion</li>
+        <li>Innovation and Adaptability</li>
+        <li>Community and Collaboration</li>
+      </ul>
+    </div>
+    <div class="missionandvision">
+      <h2>Our Mission</h2>
+      <p>To cultivate a learning community that inspires curiosity, critical thinking, and real-world impact.</p>
+      <h2>Our Vision</h2>
+      <p>To become a leading institution known for academic innovation, inclusivity, and student success.</p>
+    </div>
+    <h3 class="mt-5 mb-4 text-center heading1">Key Annual Events</h3>
+    <div class="row mt-4 mb-2" id="annual-events">
+      <div class="col-md-4 mb-4">
+        <div class="card event-card">
+          <img src="tech.jpg" class="card-img-top" alt="TechFest">
+          <div class="card-body">
+            <h5 class="card-title">TechFest & Hackathon</h5>
+            <p class="card-text">Coding marathons, project showcases, and guest talks. A hub for innovators.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card event-card">
+          <img src="cultural.jpg" class="card-img-top" alt="Cultural Week">
+          <div class="card-body">
+            <h5 class="card-title">Cultural Week</h5>
+            <p class="card-text">Dance, music, art, and celebrations. The heart of student life.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card event-card">
+          <img src="sports.jpg" class="card-img-top" alt="Sports Meet">
+          <div class="card-body">
+            <h5 class="card-title">Sports Meet</h5>
+            <p class="card-text">Inter-college competitions and fitness drives for the whole community.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="events">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h3 class="heading1">Event Catalog</h3>
+      <div class="d-flex gap-2">
+        <select id="filterCategory" class="form-select form-select-sm" style="width:140px">
+          <option value="all">All Categories</option>
+          <option value="Academic">Academic</option>
+          <option value="Cultural">Cultural</option>
+          <option value="Sports">Sports</option>
+        </select>
+      </div>
+    </div>
+    <div id="eventsGrid" class="row g-3"></div>
+  </section>
+
+  <div class="additionallinks mt-5 mb-2">
+    <h2 class="heading1">Additional Links</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card event-card">
+          <div class="card-body">
+            <h5 class="card-title text-center"><a href="../homepage/home.html">Home</a></h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card event-card">
+          <div class="card-body">
+            <h5 class="card-title text-center"><a href="../Event/event.html">Events</a></h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card event-card">
+          <div class="card-body">
+            <h5 class="card-title text-center"><a href="../contact/contact.html">Contact Us</a</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+<!-- footer  -->
+<footer class="myfooter">
+  <div class="container footer-container">
+  <div class="row">
+      <div class="col-sm-12 col-md-4 footer-section links">
+          <h3>Quick Links</h3>
+          <ul>
+             <li><a href="../homepage/home.html">Home</a></li>
+             <li><a href="../About/about_events_page.html">About Us</a></li>
+             <li><a href="../Event/event.html">Event</a></li>
+             <li><a href="../gallerypge/gallery.html">Gallery</a></li>
+             <li><a href="../contact/contact.html">Contact Us</a></li>
+             <li><a href="../feedbackpge/feedback.html">Feedback</a></li>
+          </ul>
+      </div>
+      <div class="col-sm-12 col-md-4 footer-section contact">
+          <h3>Contact Us</h3>
+           <p><a href="mailto:support@northernwondersofpakistan">Email: support@collegeevent.com</a></p>
+           <p><a href="tel:03001234567">Phone: +92 300 1234567</a></p>
+      </div>
+      <div class="col-sm-12 col-md-4 footer-section social">
+          <h3>Follow Us</h3>
+           <a href="#"><i class="bi bi-facebook"></i></a>
+           <a href="#"><i class="bi bi-instagram"></i></a>
+           <a href="#"><i class="bi bi-twitter"></i></a>
+      </div>
+  </div>
+  </div>
+    <div class="footer-bottom">
+      <p>© 2025 College Website. All rights reserved.</p>
+    </div>
+</footer>
+
+
+<script>
+const eventsData = [
+  {
+    id: '1',
+    name: 'TechFest 2026',
+    start: '2026-02-20T10:00:00',
+    end: '2026-02-20T18:00:00',
+    venue: 'Main Auditorium',
+    shortDescription: 'Coding contests, exhibitions, and panels.',
+    category: 'Academic'
+  },
+  {
+    id: '2',
+    name: 'Annual Cultural Week',
+    start: '2026-04-12T16:00:00',
+    end: '2026-04-15T22:00:00',
+    venue: 'Open-Air Theatre',
+    shortDescription: 'Dance, music, and art events.',
+    category: 'Cultural'
+  },
+  {
+    id: '3',
+    name: 'Sports Meet',
+    start: '2025-10-05T08:00:00',
+    end: '2025-10-07T18:00:00',
+    venue: 'Sports Complex',
+    shortDescription: 'Inter-college competitions.',
+    category: 'Sports'
+  },
+  {
+    id: '4',
+    name: 'Independence Day',
+    start: '2025-10-05T08:00:00',
+    end: '2025-10-07T18:00:00',
+    venue: 'Main Auditorium',
+    shortDescription: 'Dance, music, and art events.',
+    category: 'Cultural'
+  },
+  {
+    id: '5',
+    name: 'Debate Con',
+    start: '2025-10-05T08:00:00',
+    end: '2025-10-07T18:00:00',
+    venue: 'Main Auditorium',
+    shortDescription: 'Inter-college competitions.',
+    category: 'Academic'
+  },
+  {
+    id: '6',
+    name: 'Football Rush',
+    start: '2025-10-05T08:00:00',
+    end: '2025-10-07T18:00:00',
+    venue: 'Sports Complex',
+    shortDescription: 'Inter-college competitions.',
+    category: 'Sports'
+  },
+];
+function renderEvents() {
+  const filter = $('#filterCategory').val();
+  const sort = $('#sortBy').val();
+  let list = [...eventsData];
+
+  if (filter !== 'all') list = list.filter(e => e.category === filter);
+
+  $('#eventsGrid').html(list.map(e => `
+    <div class="col-md-4">
+      <div class="card event-card">
+        <div class="card-body">
+          <h5 class="card-title">${e.name}</h5>
+          <p class="card-text small">${new Date(e.start).toLocaleString()} - ${new Date(e.end).toLocaleString()}</p>
+          <p class="card-text">${e.shortDescription}</p>
+          <p class="card-text"><strong>Venue:</strong> ${e.venue}</p>
+          <span class="badge bg-secondary">${e.category}</span>
+        </div>
+      </div>
+    </div>
+  `).join(''));
+}
+
+$('#filterCategory, #sortBy').on('change', renderEvents);
+$(document).ready(renderEvents);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

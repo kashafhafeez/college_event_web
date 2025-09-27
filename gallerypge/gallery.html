@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events Gallery (Bootstrap)</title>
+  <link rel="stylesheet" href="gallery.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+
+
+<header>
+    <div class="logo">CampusConnect</div>
+    <button class="menu-btn"><span class="material-icons">menu</span></button>
+    <nav id="menu">
+      <a href="../homepage/home.html">Home</a>
+      <a href="../About/about_events_page.html">About Us</a>
+      <a href="../Event/event.html">Event</a>
+      <a href="../gallerypge/gallery.html">Gallery</a>
+      <a href="../contact/contact.html">Contact Us</a>
+      <a href="../feedbackpge/feedback.html">Feedback</a>
+    </nav>
+  </header>
+<body class="container py-4">
+
+  <h1 class="mb-4 text-center">Events Gallery</h1>
+
+  <div class="mb-3 hel">
+    <label for="groupBy" class="form-label">Group by:</label>
+    <select id="groupBy" class="form-select w-auto d-inline-block">
+      <option value="all">All events</option>
+      <option value="year">Year</option>
+      <option value="category">Category</option>
+    </select>
+  </div>
+
+  <div id="gallery" class="row"></div>
+
+
+
+
+  
+
+
+
+<!-- footer  -->
+<footer class="myfooter">
+  <div class="container footer-container">
+  <div class="row">
+      <div class="col-sm-12 col-md-4 footer-section links">
+          <h3>Quick Links</h3>
+          <ul>
+             <li><a href="../homepage/home.html">Home</a></li>
+             <li><a href="../About/about_events_page.html">About Us</a></li>
+             <li><a href="../Event/event.html">Event</a></li>
+             <li><a href="../gallerypge/gallery.html">Gallery</a></li>
+             <li><a href="../contact/contact.html">Contact Us</a></li>
+             <li><a href="../feedbackpge/feedback.html">Feedback</a></li>
+          </ul>
+      </div>
+      <div class="col-sm-12 col-md-4 footer-section contact">
+          <h3>Contact Us</h3>
+           <p><a href="mailto:support@northernwondersofpakistan">Email: support@collegeevent.com</a></p>
+           <p><a href="tel:03001234567">Phone: +92 300 1234567</a></p>
+      </div>
+      <div class="col-sm-12 col-md-4 footer-section social">
+          <h3>Follow Us</h3>
+           <a href="#"><i class="bi bi-facebook"></i></a>
+           <a href="#"><i class="bi bi-instagram"></i></a>
+           <a href="#"><i class="bi bi-twitter"></i></a>
+      </div>
+  </div>
+  </div>
+    <div class="footer-bottom">
+      <p>© 2025 College Website. All rights reserved.</p>
+    </div>
+</footer>
+  <script>
+   const data = [
+      { 
+        "eventName": "Hackathon",
+         "year": "2022-23", 
+         "category": "Technical",
+          "image": "images/img2.jpeg"
+         },
+      { 
+        "eventName": "Cultural Night",
+       "year": "2022-23", 
+       "category": "Cultural", 
+       "image": "images/img11.jpg" 
+      },
+      { 
+        "eventName": "Annual Sports Gala",
+         "year": "2023-24",
+          "category": "Sports", 
+          "image": "images/image12.jpeg" 
+        },
+      { 
+        "eventName": "Farewell Party", 
+        "year": "2024-25",
+         "category": "Social Events", 
+         "image": "images/img13.webp"
+         },
+      {
+         "eventName": "Robotics Expo",
+          "year": "2022-23",
+           "category": "Technical",
+            "image": "images/img14.jpg"
+           },
+      {
+         "eventName": "Drama Festival", 
+         "year": "2022-23",
+          "category": "Cultural", 
+          "image": "images/img15.webp" 
+        },
+      { 
+        "eventName": "Coding Competition",
+         "year": "2022-23",
+          "category": "Technical", 
+          "image": "images/img16.webp"
+         },
+      {
+         "eventName": "Cricket Tournament", 
+      "year": "2022-23",
+       "category": "Sports", 
+       "image": "images/img20.jfif" 
+      },
+      {
+         "eventName": "AI & Data Science Workshop",
+          "year": "2024-25", 
+          "category": "Technical",
+           "image": "images/img18.jfif"
+           },
+      { 
+        "eventName": "Art & Photography Exhibition", 
+        "year": "2023-24", 
+        "category": "Cultural", 
+        "image": "images/img19.jfif" },
+      {
+         "eventName": "Science & Innovation Fair", 
+         "year": "2023-24", 
+         "category": "Technical", 
+         "image": "images/img25.webp" 
+        },
+      {
+         "eventName": "Charity Fundraiser",
+          "year": "2024-25",
+           "category": "Social Events", 
+           "image": "images/img21.jpg"
+           },
+      { 
+        "eventName": "Project Exhibition", 
+        "year": "2023-24",
+         "category": "Technical",
+          "image": "images/img26.jpg" 
+        },
+      { 
+        "eventName": "Music Concert",
+         "year": "2023-24",
+         
+         "category": "Cultural", 
+         "image": "images/img27.jpg" 
+        },
+      {
+         "eventName": "Marathon", 
+         
+         "year": "2023-24", 
+         "category": "Sports",
+          "image": "images/img28.jfif"
+         },
+      { 
+        "eventName": "Alumni Meet",
+         "year": "2023-24",
+          "category": "Social Events",
+           "image": "images/img29.webp" 
+          },
+      {
+         "eventName": "Annual Dinner",
+          "year": "2023-24",
+           "category": "Social Events",
+            "image": "images/img30.jpg" 
+          
+          }
+    ];
+
+
+    const groupBySelect = document.getElementById("groupBy");
+    const galleryDiv = document.getElementById("gallery");
+
+    function renderGallery() {
+      const groupBy = groupBySelect.value;
+      galleryDiv.innerHTML = "";
+
+      if (groupBy === "all") {
+        createHeading("All Events");
+        data.forEach(item => createCard(item));
+        return;
+      }
+
+      const groups = {};
+      data.forEach(item => {
+        const key = item[groupBy];
+        if (!groups[key]) groups[key] = [];
+        groups[key].push(item);
+      });
+
+      for (let key in groups) {
+        createHeading(key);
+        groups[key].forEach(item => createCard(item));
+      }
+    }
+
+    function createHeading(text) {
+      const col = document.createElement("div");
+      col.className = "col-12 headingblock";
+      col.innerHTML = `<h3>${text}</h3>`;
+      galleryDiv.appendChild(col);
+    }
+
+    function createCard(item) {
+      const col = document.createElement("div");
+      col.className = "col-12 col-sm-6 col-md-4 col-lg-3";
+
+      col.innerHTML = `
+        <div class="gallerycard card h-100">
+          <img src="${item.image}" alt="${item.eventName}">
+          <div class="card-body">
+            <div class="title">${item.eventName}</div>
+            <div class="meta">${item.year} • ${item.category}</div>
+          </div>
+        </div>
+      `;
+      galleryDiv.appendChild(col);
+    }
+
+    groupBySelect.addEventListener("change", renderGallery);
+    groupBySelect.value = "all";
+    renderGallery();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Boldonse&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Contact Us - University Events</title>
+    <style>
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #f4f4f4;
+    }
+    
+    header {
+      background: #006b8b;
+      color: white;
+      padding: 30px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    header .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition:  0.3s;
+    }
+    nav a:hover {
+      font-weight: bold;
+      color: lightyellow;
+      text-decoration: none;
+    }
+    
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+      }
+      nav.active {
+        display: flex;
+      }
+      .menu-btn {
+        display: block;
+      }
+    }
+    main {
+      margin-top: 80px;
+      padding: 20px;
+    }
+
+    .myfooter{
+    margin-top: 50px;
+    border-top: 5px solid #006b8b;
+    width: 100%;
+    background-color: white;
+    font-size: 16px;
+}
+.footer-section a{
+    color: #006b8b;
+    text-decoration: none;
+}
+.footer-section h3{
+    color: #006b8b;
+}
+.footer-section ul{
+    list-style: none;
+    color: #006b8b;
+}
+.footer-section ul li a{
+    color: #006b8b;
+    text-decoration: none;
+}
+.footer-bottom{
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    background-color: #006b8b; 
+    color: white;
+    align-items: center;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 500;
+    height: fit-content;
+}
+.footer-container{
+    padding: 20px;
+}
+    </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">CampusConnect</div>
+    <button class="menu-btn"><span class="material-icons">menu</span></button>
+    <nav id="menu">
+      <a href="../homepage/home.html">Home</a>
+      <a href="../About/about_events_page.html">About Us</a>
+      <a href="../Event/event.html">Event</a>
+      <a href="../gallerypge/gallery.html">Gallery</a>
+      <a href="../contact/contact.html">Contact Us</a>
+      <a href="../feedbackpge/feedback.html">Feedback</a>
+    </nav>
+  </header>
+    
+
+    <div class="container">
+
+        <div>
+            <h1>Contact Us</h1>
+        </div>
+        
+        <section class="map-container">
+            <h2>Address</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.3893216657664!2d67.03021437599694!3d24.91652287788219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f5e61147d3d%3A0x7a9997c331cedc0e!2sAptech%20Learning!5e0!3m2!1sen!2s!4v1726069457935!5m2!1sen!2s"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+
+        <section class="contacts-section">
+            <h2>Faculty Co-Ordinator</h2>
+            <div id="faculty-container" class="contacts-grid"></div>
+
+            <h2>Student Co-Ordinator</h2>
+            <div id="students-container" class="contacts-grid"></div>
+        </section>
+    </div>
+
+    
+
+
+
+<!-- footer  -->
+<footer class="myfooter">
+  <div class="container footer-container">
+  <div class="row">
+      <div class="col-sm-12 col-md-4 footer-section links">
+          <h3>Quick Links</h3>
+          <ul>
+             <li><a href="../homepage/home.html">Home</a></li>
+             <li><a href="../About/about_events_page.html">About Us</a></li>
+             <li><a href="../Event/event.html">Event</a></li>
+             <li><a href="../gallerypge/gallery.html">Gallery</a></li>
+             <li><a href="../contact/contact.html">Contact Us</a></li>
+             <li><a href="../feedbackpge/feedback.html">Feedback</a></li>
+          </ul>
+      </div>
+      <div class="col-sm-12 col-md-4 footer-section contact">
+          <h3>Contact Us</h3>
+           <p><a href="mailto:support@northernwondersofpakistan">Email: support@collegeevent.com</a></p>
+           <p><a href="tel:03001234567">Phone: +92 300 1234567</a></p>
+      </div>
+      <div class="col-sm-12 col-md-4 footer-section social">
+          <h3>Follow Us</h3>
+           <a href="#"><i class="bi bi-facebook"></i></a>
+           <a href="#"><i class="bi bi-instagram"></i></a>
+           <a href="#"><i class="bi bi-twitter"></i></a>
+      </div>
+  </div>
+  </div>
+    <div class="footer-bottom">
+      <p>© 2025 College Website. All rights reserved.</p>
+    </div>
+</footer>
+
+  
+  
+    <script>
+      const menuBtn = document.querySelector(".menu-btn");
+      const menu = document.getElementById("menu");
+  
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+    </script>
+
+    <script>
+        const contactsData = {
+            "faculty": [
+                {
+                    "id": 1,
+                    "name": "Abdul Basit Hussain Siddiqui",
+                    "designation": "Professor",
+                    "department": "Computer Science",
+                    "phone": "0300-1234567",
+                    "email": "abdul123@gmail.com"
+                },
+                {
+                    "id": 2,
+                    "name": "Ali",
+                    "designation": "Professor",
+                    "department": "Electrical Engineering",
+                    "phone": "0321-9876543",
+                    "email": "Ali123@gmail.com"
+                }
+            ],
+            "students": [
+                {
+                    "id": 101,
+                    "name": "Usman Haider",
+                    "designation": "Event Co-Ordinator",
+                    "department": "BS Computer Science",
+                    "phone": "0311-5551234",
+                    "email": "usman123@gmail.com"
+                },
+                {
+                    "id": 102,
+                    "name": "Bilal",
+                    "designation": "Event Co-Ordinator",
+                    "department": "BBA",
+                    "phone": "0333-4445678",
+                    "email": "Bilal123@gmail.com"
+                }
+            ]
+        };
+
+        function renderContacts() {
+            const facultyContainer = document.getElementById('faculty-container');
+            const studentsContainer = document.getElementById('students-container');
+
+            facultyContainer.innerHTML = contactsData.faculty.map(person => `
+                <div class="contact-card">
+                    <h3>${person.name}</h3>
+                    <p><strong>${person.designation}</strong></p>
+                    <p>Department: ${person.department}</p>
+                    <p>📞 ${person.phone}</p>
+                    <p>✉️ <a href="mailto:${person.email}">${person.email}</a></p>
+                </div>
+            `).join('');
+
+            studentsContainer.innerHTML = contactsData.students.map(person => `
+                <div class="contact-card">
+                    <h3>${person.name}</h3>
+                    <p><strong>${person.designation}</strong></p>
+                    <p>Department: ${person.department}</p>
+                    <p>📞 ${person.phone}</p>
+                    <p>✉️ <a href="mailto:${person.email}">${person.email}</a></p>
+                </div>
+            `).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', renderContacts);
+    </script>
+</body>
+</html>

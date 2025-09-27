@@ -1,0 +1,142 @@
+ *{
+ margin: 0;
+ padding: 0;
+ }
+ 
+ .gallerycard {
+      margin-bottom: 25px;
+    
+    }
+    .hel{
+      margin-top: 80px;
+    }
+    .gallerycard img {
+      height: 200px;       
+      object-fit: cover;  
+      width: 100%;
+      border-radius: 8px;
+     
+    }
+    .gallerycard:hover{
+     background-color: #5c9cb6;
+      color: aliceblue;
+    }
+    .title {
+      font-weight: bold;
+      margin-top: 8px;
+    }
+    .meta {
+      font-size: 15px;
+      color: rgb(7, 5, 5);
+    }
+ .meta:hover{
+      font-size: 15px;
+      color: rgb(255, 255, 255);
+    }
+    
+    .headingblock {
+      margin: 30px  15px; 
+      
+    }
+      header {
+      background: #006b8b;
+      color: white;
+      padding: 30px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    header .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition:  0.3s;
+    }
+    nav a:hover {
+      font-weight: bold;
+      color: lightyellow;
+      text-decoration: none;
+    }
+    
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+      }
+      nav.active {
+        display: flex;
+      }
+      .menu-btn {
+        display: block;
+      }
+    }
+    main {
+      margin-top: 80px;
+      padding: 20px;
+    }
+
+    .myfooter{
+    margin-top: 50px;
+    border-top: 5px solid #006b8b;
+    width: 100%;
+    background-color: white;
+    font-size: 16px;
+}
+.footer-section a{
+    color: #006b8b;
+    text-decoration: none;
+}
+.footer-section h3{
+    color: #006b8b;
+}
+.footer-section ul{
+    list-style: none;
+    color: #006b8b;
+}
+.footer-section ul li a{
+    color: #006b8b;
+    text-decoration: none;
+}
+.footer-bottom{
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    background-color: #006b8b; 
+    color: white;
+    align-items: center;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 500;
+    height: fit-content;
+}
+.footer-container{
+    padding: 20px;
+}
